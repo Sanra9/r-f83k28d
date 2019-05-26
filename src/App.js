@@ -12,21 +12,14 @@ class App extends Component {
   }
 
 incrementNum = () => {
-  console.log(this.state)
   this.setState((state) => ({ count: state.count + 1}))
 }
-
-decrementNum = () => {
-  this.setState((state) => ({ count: state.count - 1}))
-}
-
   render() {
     const { count } = this.state
     return (
       <div>
         <span className="value">{count}</span>
         <button id="inc" onClick={this.incrementNum}>Incrementa</button>
-        <button id="inc" onClick={this.decrementNum}>Decrementa</button>
       </div>
     );
   }
